@@ -1,12 +1,20 @@
 <template>
-  <div id="nav">
-    <router-link to="/">Home</router-link> |
-    <router-link to="/about">About</router-link>
-  </div>
-  <router-view/>
+  <nav class="navbar navbar-expand navbar-light bg-light">
+    <div class="nav navbar-nav">
+      <router-link :to="{ name: 'Cars' }" class="nav-item nav-link active">
+        Cars
+      </router-link>
+      <!-- <router-link class="nav-item nav-link" :to="{ name: 'About' }">
+        About
+      </router-link> -->
+    </div>
+  </nav>
+  <router-view />
 </template>
 
 <style lang="scss">
+@import 'bootstrap';
+
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
