@@ -8,5 +8,5 @@ export const AppState = reactive({
   activeHouse: {},
   jobs: [],
   activeJob: {}
-  
+
 })
