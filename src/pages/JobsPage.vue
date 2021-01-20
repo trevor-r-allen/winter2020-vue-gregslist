@@ -18,10 +18,10 @@
 
 <script>
 import { computed, onMounted, reactive } from 'vue'
-import { useRouter } from 'vue-router'
 import { jobsService } from '../services/JobsService'
 import { AppState } from '../AppState'
 import Job from '../components/Job'
+import { useRouter } from 'vue-router'
 export default {
   name: 'JobsPage',
   setup() {

@@ -1,11 +1,11 @@
 <template>
-  <div class="car col-4">
-    <router-link :to="{ name: 'CarDetails', params: { id: car.id } }">
+  <div class="house col-4">
+    <router-link :to="{ name: 'HouseDetails', params: { id: house.id } }">
       <div class="card">
-        <img class="card-img-top" :src="car.imgUrl" alt="" />
+        <img class="card-img-top" :src="house.imgUrl" alt="" />
         <div class="card-body">
           <h4 class="card-title">
-            {{ car.make }} | {{ car.model }}
+            {{ house.bedrooms }} bed | {{ house.bathrooms }} bath
           </h4>
         </div>
       </div>
@@ -21,10 +21,15 @@ export default {
       type: Object,
       required: true
     }
+  },
+  setup(props) {
+
   }
 }
 </script>
 
-<style>
-
+<style lang="scss">
+.house {
+  cursor: pointer;
+}
 </style>

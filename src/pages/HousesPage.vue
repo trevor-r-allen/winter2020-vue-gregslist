@@ -11,17 +11,17 @@
       </div>
     </div>
     <div class="row">
-      <House />
+      <House v-for="house in houses" :key="house.id" :house="house" />
     </div>
   </div>
 </template>
 
 <script>
 import { computed, onMounted, reactive } from 'vue'
-import housesService from '../services/HousesService'
+import { housesService } from '../services/HousesService'
 import { AppState } from '../AppState'
-import { useRouter } from 'vue-router'
 import House from '../components/House'
+import { useRouter } from 'vue-router'
 export default {
   name: 'HousesPage',
   setup() {
