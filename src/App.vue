@@ -9,7 +9,15 @@
       </router-link> -->
     </div>
   </nav>
+  <!-- NOTE Router-View allows the Router to determine which component gets loaded -->
   <router-view />
+  <footer class="container-fluid bg-dark text-light">
+    <div class="row">
+      <div class="col p-5 text-center">
+        <p>Made with ♥ by CodeWorks</p>
+      </div>
+    </div>
+  </footer>
 </template>
 
 <style lang="scss">

@@ -13,6 +13,12 @@ class CarsService {
     const res = await api.get(id)
     AppState.activeCar = res.data
   }
+
+  async create(car) {
+    const res = await api.post('', car)
+    AppState.cars.push(res.data)
+    return res.data.id
+  }
 }
 
 export const carsService = new CarsService()

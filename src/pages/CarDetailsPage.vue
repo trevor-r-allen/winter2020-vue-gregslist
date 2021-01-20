@@ -22,8 +22,13 @@ export default {
     //   AppState.activeCar = {}
     // })
     onMounted(async () => {
-      await carsService.getOne(route.params.id)
-      state.loaded = true
+      try {
+        await carsService.getOne(route.params.id)
+      } catch (error) {
+        console.error(error)
+      } finally {
+        state.loaded = true
+      }
     })
     return {
       state,
