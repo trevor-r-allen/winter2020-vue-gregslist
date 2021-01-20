@@ -14,6 +14,7 @@
 
 <script>
 export default {
+  // REVIEW wat?
   name: 'Job',
   props: {
     job: {

@@ -22,6 +22,7 @@ import { housesService } from '../services/HousesService'
 import { AppState } from '../AppState'
 import House from '../components/House'
 import { useRouter } from 'vue-router'
+
 export default {
   name: 'HousesPage',
   setup() {
